@@ -1,0 +1,140 @@
+.gallery-hero {
+  padding-top: 15vh;
+  padding-bottom: 6vh;
+  padding-left: var(--margin-x);
+  padding-right: var(--margin-x);
+  background: var(--bg);
+}
+
+.gallery-hero-inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(232, 48, 10, 0.15);
+  padding-bottom: 4vh;
+}
+
+.gallery-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2rem, 5vw, 4rem);
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--red);
+}
+
+.gallery-count {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+  opacity: 0.45;
+}
+
+.gallery-section {
+  background: var(--bg);
+  padding: 10vh var(--margin-x) 14vh;
+}
+
+/* JS measures each image at 80vh and sets data-solo or data-paired;
+   width is left unforced here so JS can assign it via those attributes */
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10vh 10%;
+  align-items: flex-start;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5vh;
+}
+
+/* Fallback sizing before JS assigns data attributes */
+.gallery-item img {
+  display: block;
+  height: 80vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.gallery-item[data-solo] {
+  width: 100%;
+}
+
+.gallery-item[data-solo] img {
+  height: 80vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.gallery-item[data-paired] {
+  width: calc(50% - 5%);
+}
+
+.gallery-item[data-paired] img {
+  height: 80vh;
+  width: auto;
+  max-width: 100%;
+}
+
+.gallery-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.gallery-caption-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  color: var(--red);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.gallery-caption-meta {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+
+  .gallery-hero {
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 10vh;
+  }
+
+  .gallery-section {
+    padding-top: 0;
+    padding-bottom: 6vh;
+  }
+
+  .gallery-list {
+    gap: 8vh 0;
+  }
+
+  .gallery-item,
+  .gallery-item[data-solo],
+  .gallery-item[data-paired] {
+    width: 100%;
+  }
+
+  .gallery-item img,
+  .gallery-item[data-solo] img,
+  .gallery-item[data-paired] img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    object-position: left top;
+  }
+
+}

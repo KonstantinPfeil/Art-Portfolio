@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/images/address.png
+Disallow: /assets/images/email.png
+Disallow: /assets/images/favicon.png
+Sitemap: https://konstantinpfeil.com/sitemap.xml
