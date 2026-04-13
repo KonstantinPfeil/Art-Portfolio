@@ -55,7 +55,7 @@
 /* Fallback sizing before JS assigns data attributes */
 .gallery-item img {
   display: block;
-  height: 80vh;
+  height: 75vh;
   width: auto;
   max-width: 100%;
 }
