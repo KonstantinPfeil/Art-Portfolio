@@ -65,7 +65,7 @@
 }
 
 .gallery-item[data-solo] img {
-  height: 80vh;
+  height: 75vh;
   width: auto;
   max-width: 100%;
 }
@@ -75,7 +75,7 @@
 }
 
 .gallery-item[data-paired] img {
-  height: 80vh;
+  height: 75vh;
   width: auto;
   max-width: 100%;
 }
