@@ -200,7 +200,7 @@ function layoutGallery() {
   const contentWidth = list.getBoundingClientRect().width;
   const gap          = window.innerWidth * 0.05;
   const halfWidth    = (contentWidth - gap) / 2;
-  const imgHeight    = window.innerHeight * 0.80;
+  const imgHeight    = window.innerHeight * 0.75;
 
   items.forEach(item => {
     const img = item.querySelector('img');
